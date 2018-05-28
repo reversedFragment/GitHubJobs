@@ -9,5 +9,7 @@
 import Foundation
 
 struct Jobs: Codable {
-    
+    let title: String
+    let location: String
+    let company: String
 }
