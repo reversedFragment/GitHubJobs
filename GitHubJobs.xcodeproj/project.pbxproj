@@ -13,6 +13,7 @@
 		1693866C20BC9E2600350F74 /* GitHubJobs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1693866A20BC9E2600350F74 /* GitHubJobs.xcdatamodeld */; };
 		1693866E20BC9E2700350F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1693866D20BC9E2700350F74 /* Assets.xcassets */; };
 		1693867120BC9E2700350F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1693866F20BC9E2700350F74 /* LaunchScreen.storyboard */; };
+		1693867920BCAA1400350F74 /* Jobs Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1693867820BCAA1400350F74 /* Jobs Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1693866D20BC9E2700350F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1693867020BC9E2700350F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1693867220BC9E2700350F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1693867820BCAA1400350F74 /* Jobs Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jobs Model.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				1693866320BC9E2600350F74 /* AppDelegate.swift */,
 				1693866520BC9E2600350F74 /* ViewController.swift */,
+				1693867820BCAA1400350F74 /* Jobs Model.swift */,
 				1693866720BC9E2600350F74 /* Main.storyboard */,
 				1693866D20BC9E2700350F74 /* Assets.xcassets */,
 				1693866F20BC9E2700350F74 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				1693866620BC9E2600350F74 /* ViewController.swift in Sources */,
 				1693866C20BC9E2600350F74 /* GitHubJobs.xcdatamodeld in Sources */,
+				1693867920BCAA1400350F74 /* Jobs Model.swift in Sources */,
 				1693866420BC9E2600350F74 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
