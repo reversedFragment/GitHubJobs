@@ -14,23 +14,31 @@ class JobSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+    
+    //Button to trigger list navigation or NoJobs alert
     @IBAction func searchButtonTapped(_ sender: Any) {
-        let jobDescription = jobDescriptionTextField.text
-        let jobLocation = jobLocationTextField.text
-        return
+        guard let jobDescription = jobDescriptionTextField.text, !jobDescription.isEmpty,
+            let jobLocation = jobLocationTextField.text else {
+                return
+        }
+        
+        JobsController.searchJobs(withDescription: jobDescription, withLocation: jobLocation) { (jobs) in
+            
+            guard let jobs = jobs, !jobs.isEmpty else {
+                
+                let noJobsAlert = UIAlertController(title: nil, message: "No Jobs At All", preferredStyle: UIAlertControllerStyle.alert)
+                let cancelAlert = UIAlertAction(title: "*sigh*", style: UIAlertActionStyle.cancel, handler: nil)
+                noJobsAlert.addAction(cancelAlert)
+                DispatchQueue.main.async {
+                    self.present(noJobsAlert, animated: true, completion: nil)
+                }
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.navigationController?.pushViewController(JobListViewController.makeFromStoryboard(jobs: jobs), animated: true)
+            }
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

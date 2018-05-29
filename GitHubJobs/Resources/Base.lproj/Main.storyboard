@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="808.79999999999995" y="17.541229385307346"/>
         </scene>
-        <!--View Controller-->
+        <!--Job List View Controller-->
         <scene sceneID="zkD-wh-frM">
             <objects>
-                <viewController id="6JJ-Cs-ebT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JobListViewController" id="6JJ-Cs-ebT" customClass="JobListViewController" customModule="GitHubJobs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T0f-zx-btj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5j-xI-F0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1772" y="17.541229385307346"/>
+            <point key="canvasLocation" x="1291" y="18"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wyr-do-Geu">
@@ -96,7 +96,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4XK-iG-Hya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130.40000000000001" y="17.541229385307346"/>
+            <point key="canvasLocation" x="332" y="18"/>
         </scene>
     </scenes>
 </document>
