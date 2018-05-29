@@ -8,18 +8,12 @@
 
 import Foundation
 
-struct Jobs: Codable {
-    let results: [JobListing]
+struct Job: Codable {
+    var title: String
+    var location: String
+    var company: String
+    var url: String
 }
 
-struct JobListing: Codable {
-    let title: String?
-    let location: String?
-    let company: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case title
-        case location
-        case company
-    }
-}
+
+

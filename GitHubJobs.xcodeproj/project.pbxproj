@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		167F4BF020BD05160092DF55 /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F4BEF20BD05160092DF55 /* JobSearchViewController.swift */; };
+		167F4BF220BD052F0092DF55 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F4BF120BD052F0092DF55 /* JobListViewController.swift */; };
+		167F4BF420BD05380092DF55 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167F4BF320BD05380092DF55 /* JobDetailViewController.swift */; };
 		1693866420BC9E2600350F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1693866320BC9E2600350F74 /* AppDelegate.swift */; };
 		1693866920BC9E2600350F74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1693866720BC9E2600350F74 /* Main.storyboard */; };
 		1693866C20BC9E2600350F74 /* GitHubJobs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1693866A20BC9E2600350F74 /* GitHubJobs.xcdatamodeld */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		167F4BEF20BD05160092DF55 /* JobSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
+		167F4BF120BD052F0092DF55 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
+		167F4BF320BD05380092DF55 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		1693866020BC9E2600350F74 /* GitHubJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1693866320BC9E2600350F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1693866820BC9E2600350F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +92,9 @@
 		1693868020BCBC1900350F74 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				167F4BEF20BD05160092DF55 /* JobSearchViewController.swift */,
+				167F4BF120BD052F0092DF55 /* JobListViewController.swift */,
+				167F4BF320BD05380092DF55 /* JobDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -173,10 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				167F4BF220BD052F0092DF55 /* JobListViewController.swift in Sources */,
 				1693866C20BC9E2600350F74 /* GitHubJobs.xcdatamodeld in Sources */,
+				167F4BF420BD05380092DF55 /* JobDetailViewController.swift in Sources */,
 				1693868320BCBD9300350F74 /* Jobs Model Controller.swift in Sources */,
 				1693867920BCAA1400350F74 /* Jobs Model.swift in Sources */,
 				1693866420BC9E2600350F74 /* AppDelegate.swift in Sources */,
+				167F4BF020BD05160092DF55 /* JobSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

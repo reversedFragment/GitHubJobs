@@ -17,11 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        JobsController.searchJobs(fortitle: "Cloud", location: "Salt Lake City") { (joblistings) in
-            guard let joblistings = joblistings else { print("error fam") ; return  }
-            }
-
-     }
+        JobsController.searchJobs(withDescription: "Cloud", withLocation: "Utah") { (jobs) in
+            guard let jobs = jobs else { print("jobs fetch error") ; return }
+        }
+        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -92,6 +91,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
-

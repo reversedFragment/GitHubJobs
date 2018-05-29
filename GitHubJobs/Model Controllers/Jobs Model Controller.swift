@@ -9,26 +9,28 @@
 import Foundation
 
 class JobsController {
-    static let baseURL = URL(string: "https://jobs.github.com/")
+    static let baseURL = URL(string: "https://jobs.github.com/positions")
     
     
-    static func searchJobs(fortitle title: String, location: String, completion: @escaping (([JobListing]?) -> Void)) {
+    static func searchJobs(withDescription description: String, withLocation location: String, completion: @escaping (([Job]?)->Void)) {
         
         /// URL
-        guard var url = baseURL else { completion(nil) ; return }
-        url.appendPathComponent("positions.json")
-        
+        guard let url = baseURL?.appendingPathExtension("json") else {
+            print("Error generating URL")
+            completion(nil)
+            return
+        }
         ///Queries
         
         // Step 1 - Get URL Components
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
     
         // Step 2 - Get array of query items
-        let titleQuery = URLQueryItem.init(name: "title", value: title)
+        let descriptionQuery = URLQueryItem.init(name: "description", value: description)
         let locationQuery = URLQueryItem.init(name: "location", value: location)
         
         // Step 3 - Combine step1 and 2 aka set the components query items to equal our query array
-        let queryArray = [titleQuery, locationQuery]
+        let queryArray = [descriptionQuery, locationQuery]
          components?.queryItems = queryArray
         
         // Step 4 - Create fully constructed URL
@@ -51,13 +53,12 @@ class JobsController {
             guard let data = data else { completion(nil) ; return }
             
             do {
-                let jobs = try? JSONDecoder().decode(Jobs.self, from: data)
-                let joblistings = jobs?.results
-                completion(joblistings)
+                let jobs = try JSONDecoder().decode([Job].self, from: data)
+                completion(jobs)
                 return
                 
-            } catch {
-                print("Error decoding joblistings: \(error.localizedDescription)")
+            } catch let error {
+                print("Error decoding into jobs: \(error.localizedDescription)")
                 completion(nil)
                 return
             }
