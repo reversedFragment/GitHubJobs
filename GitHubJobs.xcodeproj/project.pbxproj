@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		1693866420BC9E2600350F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1693866320BC9E2600350F74 /* AppDelegate.swift */; };
-		1693866620BC9E2600350F74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1693866520BC9E2600350F74 /* ViewController.swift */; };
 		1693866920BC9E2600350F74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1693866720BC9E2600350F74 /* Main.storyboard */; };
 		1693866C20BC9E2600350F74 /* GitHubJobs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1693866A20BC9E2600350F74 /* GitHubJobs.xcdatamodeld */; };
 		1693866E20BC9E2700350F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1693866D20BC9E2700350F74 /* Assets.xcassets */; };
 		1693867120BC9E2700350F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1693866F20BC9E2700350F74 /* LaunchScreen.storyboard */; };
 		1693867920BCAA1400350F74 /* Jobs Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1693867820BCAA1400350F74 /* Jobs Model.swift */; };
+		1693868320BCBD9300350F74 /* Jobs Model Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1693868220BCBD9300350F74 /* Jobs Model Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1693866020BC9E2600350F74 /* GitHubJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1693866320BC9E2600350F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1693866520BC9E2600350F74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1693866820BC9E2600350F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1693866B20BC9E2600350F74 /* GitHubJobs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitHubJobs.xcdatamodel; sourceTree = "<group>"; };
 		1693866D20BC9E2700350F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1693867020BC9E2700350F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1693867220BC9E2700350F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1693867820BCAA1400350F74 /* Jobs Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jobs Model.swift"; sourceTree = "<group>"; };
+		1693868220BCBD9300350F74 /* Jobs Model Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jobs Model Controller.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +59,47 @@
 			isa = PBXGroup;
 			children = (
 				1693866320BC9E2600350F74 /* AppDelegate.swift */,
-				1693866520BC9E2600350F74 /* ViewController.swift */,
+				1693868120BCBC3000350F74 /* Resources */,
+				1693868020BCBC1900350F74 /* View Controllers */,
+				1693867F20BCBC1700350F74 /* Model Controllers */,
+				1693867C20BCBC0500350F74 /* Models */,
+			);
+			path = GitHubJobs;
+			sourceTree = "<group>";
+		};
+		1693867C20BCBC0500350F74 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				1693867820BCAA1400350F74 /* Jobs Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1693867F20BCBC1700350F74 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1693868220BCBD9300350F74 /* Jobs Model Controller.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		1693868020BCBC1900350F74 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1693868120BCBC3000350F74 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				1693866720BC9E2600350F74 /* Main.storyboard */,
 				1693866D20BC9E2700350F74 /* Assets.xcassets */,
 				1693866F20BC9E2700350F74 /* LaunchScreen.storyboard */,
 				1693867220BC9E2700350F74 /* Info.plist */,
 				1693866A20BC9E2600350F74 /* GitHubJobs.xcdatamodeld */,
 			);
-			path = GitHubJobs;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1693866620BC9E2600350F74 /* ViewController.swift in Sources */,
 				1693866C20BC9E2600350F74 /* GitHubJobs.xcdatamodeld in Sources */,
+				1693868320BCBD9300350F74 /* Jobs Model Controller.swift in Sources */,
 				1693867920BCAA1400350F74 /* Jobs Model.swift in Sources */,
 				1693866420BC9E2600350F74 /* AppDelegate.swift in Sources */,
 			);
@@ -290,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CCUMQ33UK;
-				INFOPLIST_FILE = GitHubJobs/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GitHubJobs/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CCUMQ33UK;
-				INFOPLIST_FILE = GitHubJobs/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GitHubJobs/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
