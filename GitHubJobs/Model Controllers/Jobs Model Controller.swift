@@ -26,12 +26,13 @@ class JobsController {
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
     
         // Step 2 - Get array of query items
-        let descriptionQuery = URLQueryItem.init(name: "description", value: description)
-        let locationQuery = URLQueryItem.init(name: "location", value: location)
+        var urlParameters = ["description": description,
+                             "location": location]
         
+        var queryItems = urlParameters.compactMap { URLQueryItem(name: $0.key, value: $0.value) }
         // Step 3 - Combine step1 and 2 aka set the components query items to equal our query array
-        let queryArray = [descriptionQuery, locationQuery]
-         components?.queryItems = queryArray
+        
+         components?.queryItems = queryItems
         
         // Step 4 - Create fully constructed URL
         guard let finalUrl = components?.url else { completion(nil) ; return }

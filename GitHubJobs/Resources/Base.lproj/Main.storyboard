@@ -45,7 +45,7 @@
                                         <rect key="frame" x="67" y="84" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="searchButtonTapped:" destination="h3Z-U3-dLb" eventType="touchUpInside" id="es5-2V-gXT"/>
+                                            <action selector="jobSearchButtonTapped:" destination="h3Z-U3-dLb" eventType="touchUpInside" id="rwH-w9-uYB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -56,9 +56,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="t8A-Ni-bd6"/>
                     <connections>
-                        <outlet property="jobDescriptionTextField" destination="BV3-vO-cXy" id="NUw-K2-8bZ"/>
-                        <outlet property="jobLocationTextField" destination="X5q-oD-3dp" id="njp-sX-Bs0"/>
-                        <outlet property="jobSearchTextField" destination="BV3-vO-cXy" id="aIt-M9-gNb"/>
+                        <outlet property="jobDescriptionTextField" destination="BV3-vO-cXy" id="C6E-a0-wBH"/>
+                        <outlet property="jobLocationTextField" destination="X5q-oD-3dp" id="Hcq-ba-hgs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6g-Tu-IcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

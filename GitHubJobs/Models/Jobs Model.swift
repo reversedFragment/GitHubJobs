@@ -11,6 +11,7 @@ import Foundation
 struct Job: Codable {
     var title: String
     var location: String
+    var description: String
     var company: String
     var url: String
 }
